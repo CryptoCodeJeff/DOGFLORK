@@ -29,7 +29,7 @@
   }
 
   onMount(() => {
-    const intervalSeconds = 20 // Tiempo en segundos
+    const intervalSeconds = 10 // Tiempo en segundos
     setInterval(executeRandomSequence, intervalSeconds * 1000)
 
     document.body.style.minHeight = `${window.innerHeight * sections}px`
@@ -94,7 +94,7 @@
   h3 {
     text-align: center;
     font-weight: bold;
-    padding: 30px 0;
+    padding: 40px 0;
     font-size: 50px;
     color: #612c04;
   }
@@ -185,6 +185,12 @@
 
       font-weight: bold;
       text-align: center;
+    }
+
+    &.hide {
+      @include notDesktop {
+        display: none;
+      }
     }
   }
 
@@ -354,7 +360,7 @@
         <p>4 - Haz clic en "realizar intercambio"</p>
       </div>
 
-      <div class="card">
+      <div class="card hide">
         <h4>Método Jupiter</h4>
 
         <p>1 - Conecta tu billetera en <a href="https://jup.ag/">jup.ag</a></p>
