@@ -300,7 +300,7 @@
   <h3>Launchday</h3>
   <div class="flex">
     <div class="text">
-      <p>$DogFlork will be launched at <b>20:30 UTC</b> on <a href="https://pump.fun">pump.fun</a>.</p>
+      <p>$DogFlork will be launched the 15th January 2025 at <b>20:30 UTC</b> on <a href="https://pump.fun">pump.fun</a>.</p>
 
       <p>The token will be created during a livestream on <a href="https://www.youtube.com/@arenosol">YouTube</a>.</p>
 
