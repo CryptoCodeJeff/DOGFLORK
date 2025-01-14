@@ -1,0 +1,27 @@
+{
+  "name": "bedrock",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro sync && astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "update": "ncu -u && npm install"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/svelte": "^7.0.2",
+    "@tsparticles/confetti": "^3.7.1",
+    "astro": "^5.1.6",
+    "astro-robots": "^2.3.1",
+    "leaflet": "^1.9.4",
+    "svelte": "^5.17.3",
+    "tsparticles": "^3.7.1"
+  },
+  "devDependencies": {
+    "prettier-plugin-svelte": "^3.3.3",
+    "sass": "1.83.1",
+    "typescript": "^5.7.3"
+  }
+}

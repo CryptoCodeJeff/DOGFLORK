@@ -1,0 +1,45 @@
+---
+import DogFlork from '@/components/DogFlork.svelte'
+
+const title = 'DOGFLORK'
+const description = 'Meet DOGFLORK!✨'
+---
+
+<style lang="scss">
+  * {
+    font-family: 'Indie Flower';
+  }
+</style>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/jpg" href="/assets/logo.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
+
+    <title>{title}</title>
+  </head>
+  <style lang="scss" is:global>
+    @use 'src/sass/global.scss' as *;
+  </style>
+  <body>
+    <DogFlork client:load />
+  </body>
+</html>
+
+<script>
+  import { animReveal } from '@/utils/reveal'
+
+  window.onload = () => {
+    setTimeout(() => {
+      animReveal()
+    }, 200)
+  }
+</script>

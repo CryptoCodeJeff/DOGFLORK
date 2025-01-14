@@ -1,0 +1,315 @@
+<script lang="ts">
+  import { onMount } from 'svelte'
+  import Svg from './Svg.svelte'
+
+  let flip: boolean = true
+  let scrollY: number = 0
+  let currentSection: number = 0
+
+  onMount(() => {
+    setTimeout(() => (flip = false), 1000)
+    setTimeout(() => (flip = true), 1400)
+    setTimeout(() => (flip = false), 1600)
+    setTimeout(() => (flip = true), 1800)
+  })
+
+  const scrollEffect = () => {
+    if (scrollY < window.innerHeight) currentSection = 0
+    if (scrollY > window.innerHeight) currentSection = 1
+    if (scrollY > window.innerHeight * 2) currentSection = 2
+    if (scrollY > window.innerHeight * 3) currentSection = 3
+
+    console.log(currentSection)
+  }
+</script>
+
+<style lang="scss">
+  @use 'src/sass/mixins.scss' as *;
+
+  .hero {
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+
+    .socials {
+      position: absolute;
+      display: flex;
+      gap: 30px;
+      top: 20px;
+      z-index: 9;
+    }
+
+    h1 {
+      margin-top: -30vh;
+      font-size: 150px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 50px;
+      color: #612c04;
+      margin-top: -50px;
+    }
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  h3 {
+    text-align: center;
+    font-weight: bold;
+    padding: 30px 0;
+    font-size: 50px;
+    color: #612c04;
+  }
+
+  .ghost-scroll {
+    height: 400vh;
+  }
+
+  .section {
+    transition: 0.5s ease;
+    position: fixed;
+    top: 0px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .chancla {
+    position: fixed;
+    bottom: -80px;
+  }
+
+  .text p {
+    font-size: 26px;
+  }
+
+  .times {
+    width: fit-content;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 150px 120px;
+
+    div {
+      font-size: 30px;
+    }
+
+    b {
+      font-size: 24px;
+    }
+  }
+
+  .logo {
+    position: fixed;
+    bottom: 0px;
+    right: 20%;
+
+    display: none;
+
+    animation: motionDog 1s 1s;
+    transform-origin: bottom center;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: #612c04;
+  }
+
+  .card {
+    border: 3px solid #612c04;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+
+    h4 {
+      color: #612c04;
+      font-size: 25px;
+      padding-bottom: 20px;
+
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards {
+    display: flex;
+    gap: 20px;
+  }
+
+  @keyframes motionDog {
+    0% {
+      transform: rotateZ(-10deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    40% {
+      transform: rotateZ(-10deg);
+    }
+    60% {
+      transform: rotateZ(10deg);
+    }
+    80% {
+      transform: rotateZ(-10deg);
+    }
+    100% {
+      transform: rotateZ(0deg);
+    }
+  }
+</style>
+
+<div class="hero">
+  <div class="socials">
+    <a href="https://t.me/+EEfHmPhxXNJmNjMx" target="_blank">
+      <Svg name="telegram" width="50" height="50" />
+    </a>
+    <a href="https://x.com/dogflork" target="_blank">
+      <Svg name="twitter" width="50" height="50" />
+    </a>
+    <a href="https://www.youtube.com/@arenosol" target="_blank">
+      <Svg name="youtube" width="50" height="50" />
+    </a>
+
+    <!--
+    <a href="">
+      <Svg name="pump" />
+    </a>
+
+    <a href="">
+      <Svg name="dexscreener" />
+    </a>
+    -->
+  </div>
+
+  <h1>DOGFLORK</h1>
+  <h2 reveal>Meet Flork's playful dog</h2>
+</div>
+
+<div class="images g-wrapper">
+  <img class="chancla" src="/assets/flork-chancla.png" alt="" width="500px" />
+
+  <img class="logo" class:active={flip} src="/assets/logo.png" alt="" width="300px" />
+  <img class="logo" class:active={!flip} src="/assets/flipped.png" alt="" width="300px" />
+</div>
+
+<div class:active={currentSection === 1} class="section launch">
+  <h3>Launchday</h3>
+  <div class="flex">
+    <div class="text">
+      <p>$DogFlork will be launched at <b>20:30 UTC</b> on <a href="https://pump.fun">pump.fun</a>.</p>
+
+      <p>The token will be created during a livestream on <a href="https://www.youtube.com/@arenosol">YouTube</a>.</p>
+
+      <br />
+      <br />
+      <br />
+      <p><b>✅ FAIR LAUNCH!! No presales❌, No whitelists❌</b></p>
+      <br />
+      <p><b>✅ Team supply 1.5% for marketing purposes</b></p>
+      <br />
+      <p><b>✅ DOGFLORK is a memecoin created and led by the community</b></p>
+      <br />
+      <p><b>✅ Community chooses the marketing strategy</b></p>
+    </div>
+  </div>
+</div>
+
+<div class:active={currentSection === 2} class="section">
+  <h3>Schedule</h3>
+  <div class="flex">
+    <div class="times card">
+      <b>UTC</b>
+      <div>20:30 PM</div>
+
+      <b>CEST</b>
+      <div>15:30 PM</div>
+
+      <b>COLOMBIA</b>
+      <div>15:30 PM</div>
+
+      <b>PERU</b>
+      <div>15:30 PM</div>
+
+      <b>REP. DOM.</b>
+      <div>16:30 PM</div>
+
+      <b>MEXICO</b>
+      <div>17:30 PM</div>
+
+      <b>ARGENTINA</b>
+      <div>17:30 PM</div>
+
+      <b>ESPAÑA</b>
+      <div>21:30 PM</div>
+    </div>
+  </div>
+</div>
+
+<div class:active={currentSection === 3} class="section how-to-buy">
+  <h3>How to buy</h3>
+
+  <div class="g-wrapper">
+    <div class="cards">
+      <div class="card">
+        <h4>Method Sniper</h4>
+
+        <p>Follow our detailed tutorial with GMGN</p>
+
+        <div class="col">
+          <a href="https://youtu.be/G2_tE0IDLvg" target="_blank">
+            <Svg name="youtube" width="60" height="60"></Svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Method pump.fun</h4>
+
+        <p>1 - Connect your wallet in <a href="https://pump.fun">pump.fun</a></p>
+        <p>2 - Copy the OFFICIAL contract</p>
+        <p>3 - Select an amount of SOL you want to trade</p>
+        <p>4 - Click "place trade"</p>
+      </div>
+
+      <div class="card">
+        <h4>Method Jupiter</h4>
+
+        <p>1 - Connect your wallet in <a href="https://jup.ag/">jup.ag</a></p>
+        <p>2 - Copy the OFFICIAL contract</p>
+        <p>3 - Select an amount of SOL you want to trade</p>
+        <p>4 - Click "Swap"</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ghost-scroll"></div>
+
+<svelte:window bind:scrollY on:scroll={scrollEffect} />
