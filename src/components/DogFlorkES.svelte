@@ -296,7 +296,7 @@
   <h3>Día de Lanzamiento</h3>
   <div class="flex">
     <div class="text">
-      <p>$DogFlork será lanzado a las <b>20:30 UTC</b> en <a href="https://pump.fun">pump.fun</a>.</p>
+      <p>$DogFlork será lanzado el 15 de enero del 2025 a las <b>20:30 UTC</b> en <a href="https://pump.fun">pump.fun</a>.</p>
 
       <p>El token será creado durante una transmisión en vivo en <a href="https://www.youtube.com/@arenosol">YouTube</a>.</p>
 
