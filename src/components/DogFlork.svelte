@@ -32,13 +32,15 @@
     const intervalSeconds = 10 // Tiempo en segundos
     setInterval(executeRandomSequence, intervalSeconds * 1000)
 
-    document.body.style.minHeight = `${window.innerHeight * sections}px`
+    document.body.style.minHeight = `${window.innerHeight * 0.8 * sections}px`
 
     console.log('Website created by: Scripted - https://x.com/cryptocodejeff')
   })
 
   const scrollEffect = () => {
-    currentSection = Math.min(Math.floor(scrollY / window.innerHeight), sections - 1)
+    currentSection = Math.min(Math.floor(scrollY / (window.innerHeight * 0.8)), sections - 1)
+
+    if (scrollY > window.innerHeight / 2 && scrollY < window.innerHeight) currentSection = 1
   }
 </script>
 
@@ -262,7 +264,7 @@
 
 <div class="hero">
   <div class="socials">
-    <a href="https://t.me/+EEfHmPhxXNJmNjMx" target="_blank">
+    <a href="https://t.me/DOGFLORK" target="_blank">
       <Svg name="telegram" width="50" height="50" />
     </a>
     <a href="https://x.com/dogflork" target="_blank">
@@ -321,7 +323,10 @@
       <div>20:30 PM</div>
 
       <b>CEST</b>
-      <div>15:30 PM</div>
+      <div>14:30 PM</div>
+
+      <b>MEXICO</b>
+      <div>14:30 PM</div>
 
       <b>COLOMBIA</b>
       <div>15:30 PM</div>
@@ -331,9 +336,6 @@
 
       <b>REP. DOM.</b>
       <div>16:30 PM</div>
-
-      <b>MEXICO</b>
-      <div>17:30 PM</div>
 
       <b>ARGENTINA</b>
       <div>17:30 PM</div>
