@@ -45,6 +45,12 @@
 <style lang="scss">
   @use 'src/sass/mixins.scss' as *;
 
+  .hide {
+    @include notDesktop {
+      display: none !important;
+    }
+  }
+
   .hero {
     position: relative;
     align-items: center;
@@ -76,6 +82,7 @@
       font-size: 40px;
       color: #612c04;
       margin-top: -50px;
+      text-align: center;
 
       @include notDesktop {
         font-size: 30px;
