@@ -323,7 +323,7 @@
       <div>20:30 PM</div>
 
       <b>CEST</b>
-      <div>14:30 PM</div>
+      <div>22:30 PM</div>
 
       <b>MEXICO</b>
       <div>14:30 PM</div>
