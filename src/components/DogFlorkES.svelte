@@ -34,7 +34,7 @@
 
     document.body.style.minHeight = `${window.innerHeight * sections}px`
 
-    console.log('Website created by: Scripted - https://x.com/cryptocodejeff')
+    console.log('Website creado por: Scripted - https://x.com/cryptocodejeff')
   })
 
   const scrollEffect = () => {
@@ -76,6 +76,7 @@
       font-size: 50px;
       color: #612c04;
       margin-top: -50px;
+      text-align: center;
 
       @include notDesktop {
         font-size: 30px;
@@ -265,20 +266,10 @@
     <a href="https://www.youtube.com/@arenosol" target="_blank">
       <Svg name="youtube" width="50" height="50" />
     </a>
-
-    <!--
-    <a href="">
-      <Svg name="pump" />
-    </a>
-
-    <a href="">
-      <Svg name="dexscreener" />
-    </a>
-    -->
   </div>
 
   <h1>DOGFLORK</h1>
-  <h2 reveal>Meet Flork's playful dog</h2>
+  <h2 reveal>Conoce al travieso perro de Flork</h2>
 </div>
 
 <div class="images g-wrapper">
@@ -289,27 +280,25 @@
 </div>
 
 <div class:active={currentSection === 1} class="section launch">
-  <h3>Launchday</h3>
+  <h3>Día de Lanzamiento</h3>
   <div class="flex">
     <div class="text">
-      <p>$DogFlork will be launched at <b>20:30 UTC</b> on <a href="https://pump.fun">pump.fun</a>.</p>
+      <p>$DogFlork será lanzado a las <b>20:30 UTC</b> en <a href="https://pump.fun">pump.fun</a>.</p>
 
-      <p>The token will be created during a livestream on <a href="https://www.youtube.com/@arenosol">YouTube</a>.</p>
+      <p>El token será creado durante una transmisión en vivo en <a href="https://www.youtube.com/@arenosol">YouTube</a>.</p>
 
       <br />
+      <p><b>✔︎ ¡Lanzamiento Justo! Sin preventas❌ Sin whitelists❌</b></p>
       <br />
+      <p><b>✔︎ Suministro del equipo: 1.5% para fines de marketing</b></p>
       <br />
-      <p><b>✔︎ FAIR LAUNCH!! No presales❌ No whitelists❌</b></p>
-      <br />
-      <p><b>✔︎ Team supply 1.5% for marketing purposes</b></p>
-      <br />
-      <p><b>✔︎ DOGFLORK is a memecoin created and led by the community</b></p>
+      <p><b>✔︎ DOGFLORK es una memecoin creada y liderada por la comunidad</b></p>
     </div>
   </div>
 </div>
 
 <div class:active={currentSection === 2} class="section">
-  <h3>Schedule</h3>
+  <h3>Horario</h3>
   <div class="flex">
     <div class="times card">
       <b>UTC</b>
@@ -321,13 +310,13 @@
       <b>COLOMBIA</b>
       <div>15:30 PM</div>
 
-      <b>PERU</b>
+      <b>PERÚ</b>
       <div>15:30 PM</div>
 
       <b>REP. DOM.</b>
       <div>16:30 PM</div>
 
-      <b>MEXICO</b>
+      <b>MÉXICO</b>
       <div>17:30 PM</div>
 
       <b>ARGENTINA</b>
@@ -340,14 +329,14 @@
 </div>
 
 <div class:active={currentSection === 3} class="section how-to-buy">
-  <h3>How to buy</h3>
+  <h3>Cómo comprar</h3>
 
   <div class="g-wrapper">
     <div class="cards">
       <div class="card">
-        <h4>Method Sniper</h4>
+        <h4>Método Sniper</h4>
 
-        <p>Follow our detailed tutorial with GMGN</p>
+        <p>Sigue nuestro tutorial detallado con GMGN</p>
 
         <div class="col">
           <a href="https://youtu.be/G2_tE0IDLvg" target="_blank">
@@ -357,39 +346,39 @@
       </div>
 
       <div class="card">
-        <h4>Method pump.fun</h4>
+        <h4>Método pump.fun</h4>
 
-        <p>1 - Connect your wallet in <a href="https://pump.fun">pump.fun</a></p>
-        <p>2 - Copy the OFFICIAL contract</p>
-        <p>3 - Select an amount of SOL you want to trade</p>
-        <p>4 - Click "place trade"</p>
+        <p>1 - Conecta tu billetera en <a href="https://pump.fun">pump.fun</a></p>
+        <p>2 - Copia el contrato OFICIAL</p>
+        <p>3 - Selecciona una cantidad de SOL que quieras intercambiar</p>
+        <p>4 - Haz clic en "realizar intercambio"</p>
       </div>
 
       <div class="card">
-        <h4>Method Jupiter</h4>
+        <h4>Método Jupiter</h4>
 
-        <p>1 - Connect your wallet in <a href="https://jup.ag/">jup.ag</a></p>
-        <p>2 - Copy the OFFICIAL contract</p>
-        <p>3 - Select an amount of SOL you want to trade</p>
-        <p>4 - Click "Swap"</p>
+        <p>1 - Conecta tu billetera en <a href="https://jup.ag/">jup.ag</a></p>
+        <p>2 - Copia el contrato OFICIAL</p>
+        <p>3 - Selecciona una cantidad de SOL que quieras intercambiar</p>
+        <p>4 - Haz clic en "Intercambiar"</p>
       </div>
     </div>
   </div>
 </div>
 
 <div class:active={currentSection === 4} class="section tokenomics">
-  <h3>Tokenomics</h3>
+  <h3>Tokenómics</h3>
 
   <div class="g-wrapper">
     <div class="cards">
       <div class="card">
-        <h4>Total Supply</h4>
+        <h4>Suministro Total</h4>
 
         <p>1B</p>
       </div>
 
       <div class="card">
-        <h4>Taxes</h4>
+        <h4>Impuestos</h4>
 
         <p>0%</p>
       </div>
@@ -398,7 +387,7 @@
 </div>
 
 <div class:active={currentSection === 5} class="section address">
-  <h3>Contract address</h3>
+  <h3>Dirección del contrato</h3>
 
   <div class="g-wrapper">
     <CA />
@@ -406,11 +395,11 @@
 </div>
 
 <div class:active={currentSection === 6} class="section bye">
-  <h3>Welcome to the $DOGFLORK community <br /> 🐶❤️</h3>
+  <h3>Bienvenido a la comunidad $DOGFLORK <br /> 🐶❤️</h3>
 
   <img src="/assets/footer.png" alt="" width="100%" style="right: 0%; bottom: 0px;" />
 </div>
 
-<a href="/es" style="position: fixed; right: 10px; bottom: 10px;">Español</a>
+<a href="/" style="position: fixed; right: 10px; bottom: 10px;">English</a>
 
 <svelte:window bind:scrollY on:scroll={scrollEffect} />

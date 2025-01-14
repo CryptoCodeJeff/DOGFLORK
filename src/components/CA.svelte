@@ -1,5 +1,5 @@
 <script lang="ts">
-  let ca = 'BviGb17hH615cwEKKRdTA9fAUEWpjRtw6ZrJQ4WkFaSd'
+  let ca = 'Después del lanzamiento será posteado aquí'
   let show = false
 
   const copy = () => {
