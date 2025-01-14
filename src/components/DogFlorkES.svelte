@@ -286,8 +286,8 @@
 <div class="images g-wrapper">
   <img class="chancla" src="/assets/flork-chancla.png" alt="" width="500px" />
 
-  <img class="logo" class:active={flip} src="/assets/logo.png" alt="" width="300px" />
-  <img class="logo" class:active={!flip} src="/assets/flipped.png" alt="" width="300px" />
+  <img class="logo" class:active={flip} src="/assets/logo.png" alt="" width="200px" />
+  <img class="logo" class:active={!flip} src="/assets/flipped.png" alt="" width="200px" />
 </div>
 
 <div class:active={currentSection === 1} class="section launch">
