@@ -303,7 +303,6 @@
 
       <br />
       <br />
-      <br />
       <p><b>✔︎ FAIR LAUNCH!! No presales❌ No whitelists❌</b></p>
       <br />
       <p><b>✔︎ Team supply 1.5% for marketing purposes</b></p>
