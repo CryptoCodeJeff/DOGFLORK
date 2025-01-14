@@ -34,7 +34,7 @@
 
     document.body.style.minHeight = `${window.innerHeight * sections}px`
 
-    console.log('Website creado por: Scripted - https://x.com/cryptocodejeff')
+    console.log('Website created by: Scripted - https://x.com/cryptocodejeff')
   })
 
   const scrollEffect = () => {
@@ -63,7 +63,7 @@
 
     h1 {
       margin-top: -30vh;
-      font-size: 150px;
+      font-size: 130px;
       font-weight: bold;
       text-align: center;
 
@@ -73,10 +73,9 @@
     }
 
     h2 {
-      font-size: 50px;
+      font-size: 40px;
       color: #612c04;
       margin-top: -50px;
-      text-align: center;
 
       @include notDesktop {
         font-size: 30px;
@@ -95,7 +94,7 @@
     text-align: center;
     font-weight: bold;
     padding: 40px 0;
-    font-size: 50px;
+    font-size: 40px;
     color: #612c04;
   }
 
@@ -127,10 +126,9 @@
     padding: 0 20px;
   }
   .text p {
-    font-size: 26px;
+    font-size: 20px;
 
     @include notDesktop {
-      font-size: 20px;
       margin-top: -10px;
     }
   }
@@ -144,11 +142,11 @@
     grid-template-columns: 150px 120px;
 
     div {
-      font-size: 30px;
+      font-size: 24px;
     }
 
     b {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 
@@ -186,12 +184,6 @@
       font-weight: bold;
       text-align: center;
     }
-
-    &.hide {
-      @include notDesktop {
-        display: none;
-      }
-    }
   }
 
   .col {
@@ -225,6 +217,12 @@
       p {
         font-size: 60px;
         text-align: center;
+      }
+
+      &.hide {
+        @include notDesktop {
+          display: none;
+        }
       }
     }
   }
