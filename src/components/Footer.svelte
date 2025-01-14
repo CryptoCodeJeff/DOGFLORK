@@ -67,7 +67,8 @@
 <footer>
   <div class="legal-section">
     <p>
-      $MISHA is a meme coin for fun, with no real value or profit expectation. By buying $MISHA, you agree you've read and understood this.
+      $DOGFLORK is a meme coin for fun, with no real value or profit expectation. By buying $DOGFLORK, you agree you've read and understood
+      this.
     </p>
     <div>© {new Date().getFullYear()} {company}</div>
   </div>

@@ -1,25 +1,43 @@
 <script lang="ts">
+  import CA from './CA.svelte'
   import { onMount } from 'svelte'
   import Svg from './Svg.svelte'
+  import Footer from './Footer.svelte'
 
   let flip: boolean = true
   let scrollY: number = 0
   let currentSection: number = 0
 
+  const sections = 8 // Número total de secciones
+
+  const flipTimings = [
+    { time: 1000, value: false },
+    { time: 1400, value: true },
+    { time: 1600, value: false },
+    { time: 1800, value: true },
+  ]
+
+  const executeRandomSequence = () => {
+    // Barajar los elementos del arreglo de forma aleatoria
+    const shuffledTimings = flipTimings.sort(() => Math.random() - 0.5)
+
+    // Ejecutar la secuencia de valores
+    shuffledTimings.forEach(({ time, value }) => {
+      setTimeout(() => {
+        flip = value
+      }, time)
+    })
+  }
+
   onMount(() => {
-    setTimeout(() => (flip = false), 1000)
-    setTimeout(() => (flip = true), 1400)
-    setTimeout(() => (flip = false), 1600)
-    setTimeout(() => (flip = true), 1800)
+    const intervalSeconds = 20 // Tiempo en segundos
+    setInterval(executeRandomSequence, intervalSeconds * 1000)
+
+    document.body.style.minHeight = `${window.innerHeight * sections}px`
   })
 
   const scrollEffect = () => {
-    if (scrollY < window.innerHeight) currentSection = 0
-    if (scrollY > window.innerHeight) currentSection = 1
-    if (scrollY > window.innerHeight * 2) currentSection = 2
-    if (scrollY > window.innerHeight * 3) currentSection = 3
-
-    console.log(currentSection)
+    currentSection = Math.min(Math.floor(scrollY / window.innerHeight), sections - 1)
   }
 </script>
 
@@ -47,12 +65,21 @@
       font-size: 150px;
       font-weight: bold;
       text-align: center;
+
+      @include notDesktop {
+        font-size: 70px;
+      }
     }
 
     h2 {
       font-size: 50px;
       color: #612c04;
       margin-top: -50px;
+
+      @include notDesktop {
+        font-size: 30px;
+        margin-top: -10px;
+      }
     }
   }
 
@@ -70,10 +97,6 @@
     color: #612c04;
   }
 
-  .ghost-scroll {
-    height: 400vh;
-  }
-
   .section {
     transition: 0.5s ease;
     position: fixed;
@@ -85,16 +108,29 @@
 
     &.active {
       opacity: 1;
+      z-index: 9;
     }
   }
 
   .chancla {
     position: fixed;
     bottom: -80px;
+
+    @include notDesktop {
+      display: none;
+    }
   }
 
+  .text {
+    padding: 0 20px;
+  }
   .text p {
     font-size: 26px;
+
+    @include notDesktop {
+      font-size: 20px;
+      margin-top: -10px;
+    }
   }
 
   .times {
@@ -137,7 +173,7 @@
   .card {
     border: 3px solid #612c04;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(253, 241, 232);
     padding: 20px;
 
     h4 {
@@ -161,6 +197,38 @@
   .cards {
     display: flex;
     gap: 20px;
+
+    @include notDesktop {
+      flex-direction: column;
+    }
+  }
+
+  .tokenomics {
+    .cards {
+      justify-content: center;
+    }
+    .card {
+      width: 250px;
+
+      @include notDesktop {
+        width: 100%;
+      }
+
+      p {
+        font-size: 60px;
+        text-align: center;
+      }
+    }
+  }
+
+  .bye {
+    padding: 10vh 0;
+    z-index: -1 !important;
+
+    img {
+      position: fixed;
+      bottom: 0;
+    }
   }
 
   @keyframes motionDog {
@@ -230,13 +298,11 @@
       <br />
       <br />
       <br />
-      <p><b>✅ FAIR LAUNCH!! No presales❌, No whitelists❌</b></p>
+      <p><b>✔︎ FAIR LAUNCH!! No presales❌ No whitelists❌</b></p>
       <br />
-      <p><b>✅ Team supply 1.5% for marketing purposes</b></p>
+      <p><b>✔︎ Team supply 1.5% for marketing purposes</b></p>
       <br />
-      <p><b>✅ DOGFLORK is a memecoin created and led by the community</b></p>
-      <br />
-      <p><b>✅ Community chooses the marketing strategy</b></p>
+      <p><b>✔︎ DOGFLORK is a memecoin created and led by the community</b></p>
     </div>
   </div>
 </div>
@@ -310,6 +376,38 @@
   </div>
 </div>
 
-<div class="ghost-scroll"></div>
+<div class:active={currentSection === 4} class="section tokenomics">
+  <h3>Tokenomics</h3>
+
+  <div class="g-wrapper">
+    <div class="cards">
+      <div class="card">
+        <h4>Total Supply</h4>
+
+        <p>1B</p>
+      </div>
+
+      <div class="card">
+        <h4>Taxes</h4>
+
+        <p>0%</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class:active={currentSection === 5} class="section address">
+  <h3>Contract address</h3>
+
+  <div class="g-wrapper">
+    <CA />
+  </div>
+</div>
+
+<div class:active={currentSection === 6} class="section bye">
+  <h3>Welcome to the $DOGFLORK community <br /> 🐶❤️</h3>
+
+  <img src="/assets/footer.png" alt="" width="100%" style="right: 0%; bottom: 0px;" />
+</div>
 
 <svelte:window bind:scrollY on:scroll={scrollEffect} />
