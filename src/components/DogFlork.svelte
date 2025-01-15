@@ -205,6 +205,7 @@
 
   .cards {
     display: flex;
+    justify-content: center;
     gap: 20px;
 
     @include notDesktop {
