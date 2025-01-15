@@ -279,6 +279,14 @@
     <a href="https://www.youtube.com/@arenosol" target="_blank">
       <Svg name="youtube" width="50" height="50" />
     </a>
+
+    <a href="https://pump.fun/coin/ofk66aKchrQzXv2xxVrZuQPyRsrNmTxgtG1FEaFpump">
+      <Svg name="pump" />
+    </a>
+
+    <a href="https://dexscreener.com/solana/51tqbfn5sn1zohranjnfrc1ktkik4ej8qsbyjuq8rpbe">
+      <Svg name="dexscreener" />
+    </a>
   </div>
 
   <h1>DOGFLORK</h1>
@@ -293,14 +301,9 @@
 </div>
 
 <div class:active={currentSection === 1} class="section launch">
-  <h3>Día de Lanzamiento</h3>
+  <h3>Características</h3>
   <div class="flex">
     <div class="text">
-      <p>$DogFlork será lanzado a las <b>20:30 UTC</b> en <a href="https://pump.fun">pump.fun</a>.</p>
-
-      <p>El token será creado durante una transmisión en vivo en <a href="https://www.youtube.com/@arenosol">YouTube</a>.</p>
-
-      <br />
       <p><b>✔︎ ¡Lanzamiento Justo! Sin preventas❌ Sin whitelists❌</b></p>
       <br />
       <p><b>✔︎ Suministro del equipo: 1.5% para fines de marketing</b></p>
@@ -310,54 +313,11 @@
   </div>
 </div>
 
-<div class:active={currentSection === 2} class="section">
-  <h3>Horario</h3>
-  <div class="flex">
-    <div class="times card">
-      <b>UTC</b>
-      <div>20:30 PM</div>
-
-      <b>CEST</b>
-      <div>14:30 PM</div>
-
-      <b>MÉXICO</b>
-      <div>14:30 PM</div>
-
-      <b>COLOMBIA</b>
-      <div>15:30 PM</div>
-
-      <b>PERÚ</b>
-      <div>15:30 PM</div>
-
-      <b>REP. DOM.</b>
-      <div>16:30 PM</div>
-
-      <b>ARGENTINA</b>
-      <div>17:30 PM</div>
-
-      <b>ESPAÑA</b>
-      <div>21:30 PM</div>
-    </div>
-  </div>
-</div>
-
-<div class:active={currentSection === 3} class="section how-to-buy">
+<div class:active={currentSection === 2} class="section how-to-buy">
   <h3>Cómo comprar</h3>
 
   <div class="g-wrapper">
     <div class="cards">
-      <div class="card">
-        <h4>Método Sniper</h4>
-
-        <p>Sigue nuestro tutorial detallado con GMGN</p>
-
-        <div class="col">
-          <a href="https://youtu.be/G2_tE0IDLvg" target="_blank">
-            <Svg name="youtube" width="60" height="60"></Svg>
-          </a>
-        </div>
-      </div>
-
       <div class="card">
         <h4>Método pump.fun</h4>
 
@@ -367,7 +327,7 @@
         <p>4 - Haz clic en "realizar intercambio"</p>
       </div>
 
-      <div class="card hide">
+      <div class="card">
         <h4>Método Jupiter</h4>
 
         <p>1 - Conecta tu billetera en <a href="https://jup.ag/">jup.ag</a></p>
@@ -379,7 +339,7 @@
   </div>
 </div>
 
-<div class:active={currentSection === 4} class="section tokenomics">
+<div class:active={currentSection === 3} class="section tokenomics">
   <h3>Tokenómics</h3>
 
   <div class="g-wrapper">
@@ -399,7 +359,7 @@
   </div>
 </div>
 
-<div class:active={currentSection === 5} class="section address">
+<div class:active={currentSection === 4} class="section address">
   <h3>Dirección del contrato</h3>
 
   <div class="g-wrapper">
@@ -407,7 +367,7 @@
   </div>
 </div>
 
-<div class:active={currentSection === 6} class="section bye">
+<div class:active={currentSection === 5} class="section bye">
   <h3>Bienvenido a la comunidad $DOGFLORK <br /> 🐶❤️</h3>
 
   <img src="/assets/footer.png" alt="" width="100%" style="right: 0%; bottom: 0px;" />
