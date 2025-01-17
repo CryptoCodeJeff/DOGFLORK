@@ -271,22 +271,18 @@
 
 <div class="hero">
   <div class="socials">
-    <a href="https://t.me/DOGFLORK" target="_blank">
+    <a href="https://t.me/ARENOCTO" target="_blank">
       <Svg name="telegram" width="50" height="50" />
     </a>
-    <a href="https://x.com/dogflork" target="_blank">
+    <a href="https://x.com/Arenocto" target="_blank">
       <Svg name="twitter" width="50" height="50" />
     </a>
     <a href="https://www.youtube.com/@arenosol" target="_blank">
       <Svg name="youtube" width="50" height="50" />
     </a>
 
-    <a href="https://pump.fun/coin/ofk66aKchrQzXv2xxVrZuQPyRsrNmTxgtG1FEaFpump">
-      <Svg name="pump" />
-    </a>
-
-    <a href="https://dexscreener.com/solana/51tqbfn5sn1zohranjnfrc1ktkik4ej8qsbyjuq8rpbe">
-      <Svg name="dexscreener" />
+    <a href="https://pump.fun/coin/F9YaWZB2pvhf412XYX6Lq5eYF7dhV1ePWtjJesKgpump">
+      <Svg name="pump" width="50" height="50" />
     </a>
   </div>
 
